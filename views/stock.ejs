@@ -1,0 +1,44 @@
+<!-- 주식데이터 조회 -->
+<html>
+    <head>
+        <title>msgboardList</title>
+        <link rel='stylesheet' href='/stylesheets/style.css'/>
+        <script>
+            /*function del(){
+                deletefrm.submit();
+            }*/
+        </script>
+    </head>
+    <body>
+        <a href="/api/board/list">Home</a>
+        <form action="/api/board/searchStock" method="post">  
+            <table bordercolor="black" border="1">
+                <input type="hidden" name="num" value=""/>
+                <tr>
+                    <td>주식티커</td>
+                    <td><input type="text" name="ticker" value="" > </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">정보조회</button>
+                    </td>
+                </tr>
+            </table>
+            <table bordercolor="black" border="1">
+              <tr>
+                <td>종목명</td>     <!-- 1 -->
+                <td>종목코드</td>   <!-- 2 -->
+                <td>목표주가</td>   <!-- 3 -->
+                <td>현재주가</td>   <!-- 4 -->
+              </tr>  
+              <tr>
+                <td><input type="text" width="11" name="name" value=""> </td>   <!-- 1 -->
+                <td><input type="text" width="11" name="name" value=""></td>    <!-- 2 -->  
+                <td><input type="text" width="11" name="name" value=""></td>  <!-- 3 --> 
+                <td><input type="text" width="11" name="name" value=""></td> <!-- 4 -->
+              </tr>
+            </table>
+        </form>
+        
+    </body>
+
